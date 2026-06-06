@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KodyZen Technologies</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#0f172a;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* Navbar */
+
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    background:rgba(15,23,42,0.95);
+    backdrop-filter:blur(10px);
+    z-index:1000;
+}
+
+.logo{
+    font-size:2rem;
+    font-weight:700;
+    color:#facc15;
+}
+
+.nav-links{
+    display:flex;
+    gap:30px;
+    list-style:none;
+}
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#facc15;
+}
+
+/* Hero */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:0 10%;
+    background:linear-gradient(135deg,#0f172a,#1e293b);
+}
+
+.hero-content h1{
+    font-size:4rem;
+    margin-bottom:20px;
+}
+
+.hero-content span{
+    color:#facc15;
+}
+
+.hero-content p{
+    max-width:800px;
+    margin:auto;
+    font-size:1.1rem;
+    line-height:1.8;
+    color:#cbd5e1;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:30px;
+    padding:14px 35px;
+    border-radius:40px;
+    text-decoration:none;
+    font-weight:600;
+    background:#facc15;
+    color:#000;
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:translateY(-5px);
+}
+
+/* Sections */
+
+section{
+    padding:100px 10%;
+}
+
+.section-title{
+    text-align:center;
+    font-size:2.5rem;
+    margin-bottom:50px;
+    color:#facc15;
+}
+
+/* About */
+
+.about{
+    text-align:center;
+}
+
+.about p{
+    max-width:1000px;
+    margin:auto;
+    line-height:2;
+    color:#cbd5e1;
+}
+
+/* Cards */
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:#1e293b;
+    padding:30px;
+    border-radius:20px;
+    transition:.4s;
+    border:1px solid rgba(255,255,255,.08);
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    border-color:#facc15;
+}
+
+.card h3{
+    color:#facc15;
+    margin-bottom:15px;
+}
+
+.card p{
+    color:#cbd5e1;
+    line-height:1.7;
+}
+
+/* Tech Stack */
+
+.tech{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:15px;
+}
+
+.tech span{
+    background:#1e293b;
+    padding:12px 20px;
+    border-radius:30px;
+    border:1px solid rgba(255,255,255,.08);
+}
+
+/* Why Us */
+
+.why-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.why-box{
+    background:#1e293b;
+    padding:25px;
+    text-align:center;
+    border-radius:15px;
+}
+
+/* Contact */
+
+.contact{
+    text-align:center;
+}
+
+.contact p{
+    margin:15px 0;
+    color:#cbd5e1;
+}
+
+.contact a{
+    color:#facc15;
+    text-decoration:none;
+}
+
+/* Footer */
+
+footer{
+    text-align:center;
+    padding:25px;
+    background:#020617;
+    color:#94a3b8;
+}
+
+/* WhatsApp */
+
+.whatsapp{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    background:#25D366;
+    color:white;
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:28px;
+    text-decoration:none;
+    box-shadow:0 5px 15px rgba(0,0,0,.3);
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+.hero-content h1{
+    font-size:2.5rem;
+}
+
+.nav-links{
+    display:none;
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<nav>
+    <div class="logo">KodyZen</div>
+
+    <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#technologies">Technologies</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>
+Building Future-Ready <span>Projects & Careers</span>
+</h1>
+
+<p>
+KodyZen helps engineering students build innovative Final Year Projects,
+gain practical technical skills, and prepare for successful careers through
+project mentorship, mock interviews, and industry-focused guidance.
+</p>
+
+<a href="#contact" class="btn">
+Get Started
+</a>
+
+</div>
+
+</section>
+
+<section id="about">
+
+<h2 class="section-title">About KodyZen</h2>
+
+<div class="about">
+
+<p>
+
+🚀 KodyZen is a technology-focused freelancing startup dedicated to helping students bridge the gap between academics and industry.
+
+Our primary focus is Final Year Engineering Projects, where we guide students in building innovative and industry-relevant solutions across multiple technologies and domains.
+
+Along with project development, we help students strengthen their technical skills and prepare for placements through Mock Interviews, Python, Java, SQL training, Resume Building, and Career Mentorship.
+
+We believe a project should not just be submitted — it should help students confidently explain their work during interviews and stand out in placements.
+
+</p>
+
+</div>
+
+</section>
+
+<section id="services">
+
+<h2 class="section-title">Our Services</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>🎓 Final Year Projects</h3>
+<p>
+Project Selection, Development Guidance, Documentation,
+PPT Preparation, Viva Preparation and End-to-End Support.
+</p>
+</div>
+
+<div class="card">
+<h3>🤖 AI & Machine Learning</h3>
+<p>
+Machine Learning, Deep Learning,
+Computer Vision, NLP and Generative AI Projects.
+</p>
+</div>
+
+<div class="card">
+<h3>💻 Full Stack Development</h3>
+<p>
+Spring Boot, React.js, Angular,
+Node.js, Django and REST API Projects.
+</p>
+</div>
+
+<div class="card">
+<h3>🌐 Web Applications</h3>
+<p>
+Portfolio Websites, Dashboards,
+Management Systems and Business Applications.
+</p>
+</div>
+
+<div class="card">
+<h3>🎯 Job Preparation</h3>
+<p>
+Mock Interviews, Placement Guidance,
+Resume Building and Career Mentorship.
+</p>
+</div>
+
+<div class="card">
+<h3>👨‍💻 Technical Training</h3>
+<p>
+Python, Java, SQL,
+Interview Questions and Problem Solving.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="technologies">
+
+<h2 class="section-title">Technologies We Work With</h2>
+
+<div class="tech">
+
+<span>Python</span>
+<span>Java</span>
+<span>SQL</span>
+<span>Spring Boot</span>
+<span>React.js</span>
+<span>Angular</span>
+<span>Node.js</span>
+<span>Django</span>
+<span>REST APIs</span>
+<span>Machine Learning</span>
+<span>Deep Learning</span>
+<span>Generative AI</span>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">Why Choose KodyZen?</h2>
+
+<div class="why-grid">
+
+<div class="why-box">✔ Industry-Relevant Projects</div>
+
+<div class="why-box">✔ Personalized Mentorship</div>
+
+<div class="why-box">✔ End-to-End Project Support</div>
+
+<div class="why-box">✔ Practical Learning Approach</div>
+
+<div class="why-box">✔ Interview-Focused Preparation</div>
+
+<div class="why-box">✔ Student-Friendly Services</div>
+
+<div class="why-box">✔ Continuous Support</div>
+
+<div class="why-box">✔ Real-World Problem Solving</div>
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<h2 class="section-title">Contact Us</h2>
+
+<div class="contact">
+
+<p>📍 Hyderabad, Telangana, India</p>
+
+<p>📞 +91 90085 18358</p>
+
+<p>📧 kodygenztechnologies@gmail.com</p>
+
+<p>
+🔗
+<a href="https://linkedin.com/in/kodyzen-technologies-17957040a" target="_blank">
+LinkedIn Profile
+</a>
+</p>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>
+© 2026 KodyZen Technologies | Learn. Build. Grow. Succeed.
+</p>
+
+</footer>
+
+<a
+class="whatsapp"
+href="https://wa.me/919008518358"
+target="_blank"
+>
+💬
+</a>
+
+<script>
+
+const cards = document.querySelectorAll('.card');
+
+const observer = new IntersectionObserver(entries => {
+
+entries.forEach(entry => {
+
+if(entry.isIntersecting){
+
+entry.target.style.opacity = "1";
+entry.target.style.transform = "translateY(0)";
+
+}
+
+});
+
+});
+
+cards.forEach(card => {
+
+card.style.opacity = "0";
+card.style.transform = "translateY(40px)";
+card.style.transition = ".6s";
+
+observer.observe(card);
+
+});
+
+</script>
+
+</body>
+</html>
